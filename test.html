@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>吾问无为谓无无无无</title>
+	</head>
+	<body>
+		<textarea id="text">
+[01:00.01]曾共渡患难日子总有乐趣
+[01:02.02]不相信会绝望
+[01:04.44]不感觉到踌躇
+[01:06.88]在美梦里竞争
+[01:08.70]每日拼命进取
+[01:10.53]奔波的风雨里
+[01:12.36]不羁的醒与醉
+[01:14.38]所有故事像已发生
+[01:16.19]飘泊岁月里
+		</textarea>
+	</body>
+	<script>
+		/*var str='{id: " a1", src: " 1.jpg", price: " 100", name: " A", count: 1}';
+		console.log(str);
+		var reg=/\s+/ig;
+		result=str.replace(reg,"");
+		console.log(result)*/
+		var txt=document.getElementById("text").value;
+		var a=txt.split("[");
+		//console.log(a);
+		for(var i=1;i<a.length;i++){
+			var b=a[i].split("]");
+			//console.log(b);
+			var c=b[0].split(".");//["01:00", "01"];
+			var gc=b[1];
+			//console.log(gc)
+			//console.log(c);
+			var d=c[0].split(":");//["01", "12"]
+			//console.log(d);
+			var timer=d[0]*60+d[1]*1;
+			console.log(timer)
+		}
+	</script>
+</html>
